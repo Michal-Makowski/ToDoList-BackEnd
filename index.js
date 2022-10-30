@@ -7,8 +7,8 @@ app.use(express.json());
 // --- List with task object (task and status) --- //
 const taskList = [];
 // --- Conection + Heroku port--- //
-const port = process.env.port || 8888;
-app.listen(port, (req, res) => {
+const port = process.env.PORT || 8888;
+app.listen(port, () => {
 	console.log("Server connected");
 });
 // --- Add task from FrontEnd to taskList (new task) --- //
