@@ -11,6 +11,10 @@ const port = process.env.PORT || 8888;
 app.listen(port, () => {
 	console.log("Server connected");
 });
+
+app.get("/", (req, res) => {
+	res.send("Server connected");
+});
 // --- Add task from FrontEnd to taskList (new task) --- //
 app.post("/task", (req, res) => {
 	taskList.push(req.body);
